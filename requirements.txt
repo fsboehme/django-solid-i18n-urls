@@ -1,1 +1,2 @@
-django>=1.8,<1.10
+django>=1.6,<1.10
+requests==2.11.1
