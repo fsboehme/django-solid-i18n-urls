@@ -35,8 +35,7 @@ def get_language_from_path(path):
         strict = getattr(settings, 'SOLID_I18N_PREFIX_STRICT', False)
         if strict and not strict_language_code_prefix_re.match(path):
             return None
-        # strict below could possibly be removed since the above is in place
-        return trans.trans_real.get_language_from_path(path, strict=strict)
+        return trans.trans_real.get_language_from_path(path)
 
 
 class SolidLocaleMiddleware(LocaleMiddleware):
